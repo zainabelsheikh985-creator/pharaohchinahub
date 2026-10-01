@@ -1,0 +1,253 @@
+/* Palette: Dark Navy, Egyptian Gold, Chinese Crimson Red */
+:root {
+  --primary-gold: #d4af37;
+  --pharaoh-blue: #0b1d3a;
+  --chinese-red: #8b0000;
+  --soft-gold: #f4e8c1;
+  --text-dark: #222222;
+  --card-bg: rgba(255, 255, 255, 0.95);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--pharaoh-blue);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Custom Styling for Ruby (Pinyin Display) */
+ruby {
+  ruby-position: under;
+  display: inline-ruby;
+  margin: 0 2px;
+}
+
+rt {
+  font-size: 0.6em;
+  color: var(--primary-gold);
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.card rt, .translator-box rt, .chat-widget rt {
+  color: var(--chinese-red);
+}
+
+/* Header & Navigation */
+header {
+  background: linear-gradient(135deg, var(--chinese-red), var(--pharaoh-blue));
+  border-bottom: 3px solid var(--primary-gold);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-gold);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-gold);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: radial-gradient(circle, rgba(139,0,0,0.4) 0%, rgba(11,29,58,0.9) 100%);
+  border-bottom: 2px solid var(--primary-gold);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary-gold);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Main Container */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--primary-gold);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Cards Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--text-dark);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 2px solid var(--primary-gold);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+  color: var(--chinese-red);
+  margin-bottom: 0.5rem;
+}
+
+/* Translator Section */
+.translator-box {
+  background: var(--card-bg);
+  color: var(--text-dark);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid var(--primary-gold);
+}
+
+.translator-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+select, textarea, input, button {
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+button.btn-primary {
+  background-color: var(--chinese-red);
+  color: #fff;
+  border: 1px solid var(--primary-gold);
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button.btn-primary:hover {
+  background-color: var(--primary-gold);
+  color: var(--pharaoh-blue);
+}
+
+/* Floating Chatbot Widget */
+.chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 340px;
+  background: #fff;
+  color: var(--text-dark);
+  border-radius: 10px;
+  border: 2px solid var(--primary-gold);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.chat-header {
+  background: var(--chinese-red);
+  color: var(--primary-gold);
+  padding: 0.8rem;
+  font-weight: bold;
+}
+
+.chat-body {
+  height: 250px;
+  padding: 0.8rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #f9f9f9;
+}
+
+.chat-msg {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  max-width: 85%;
+  font-size: 0.9rem;
+}
+
+.chat-msg.bot {
+  background: #e1e9f5;
+  align-self: flex-start;
+}
+
+.chat-msg.user {
+  background: var(--primary-gold);
+  color: #000;
+  align-self: flex-end;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 0.5rem;
+  background: #eee;
+}
+
+.chat-footer input {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+/* Quiz Styles */
+.quiz-option {
+  display: block;
+  width: 100%;
+  text-align: right;
+  margin: 0.5rem 0;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.quiz-option:hover {
+  background: var(--soft-gold);
+}

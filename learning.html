@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اختبار المستوى وتعلّم الصينية - Pharaonic China Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">𓂀 تعلم اللغة الصينية 🐉</div>
+    <nav>
+      <a href="index.html">الرئيسية (Home)</a>
+      <a href="learning.html">تعلم الصينية (Learning)</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title">
+      اختبار تحديد المستوى 
+      <span style="font-size: 1.2rem; color: var(--soft-gold); display: block;">(Chinese Placement Test)</span>
+    </h2>
+    
+    <!-- Quiz Container -->
+    <div class="card" id="quizContainer">
+      <h3 id="questionTitle">السؤال 1</h3>
+      <div id="questionText" style="font-size: 1.2rem; margin-top: 0.5rem;">جاري تحميل السؤال...</div>
+      <div id="optionsContainer" style="margin-top: 1.5rem;"></div>
+    </div>
+
+    <!-- Learning Dashboard (Shown after quiz) -->
+    <div class="card" id="learningDashboard" style="display: none; margin-top: 2rem;">
+      <h3 style="color: #2e7d32;">نتيجة الاختبار ومسار التعلم</h3>
+      <p id="levelResult" style="font-size: 1.3rem; margin: 1rem 0; font-weight: bold;"></p>
+      
+      <hr style="margin: 1rem 0; border: 0; border-top: 1px solid var(--primary-gold);">
+      
+      <h4>المحتوى المخصص لمستواك:</h4>
+      <div id="levelContent" style="margin-top: 1rem; line-height: 2;"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    window.onload = function() {
+      if(document.getElementById('quizContainer')) {
+        loadQuestion();
+      }
+    };
+  </script>
+</body>
+</html>

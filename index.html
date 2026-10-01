@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>埃及风情与中文学习 - Pharaonic China Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">𓂀 埃及与中国 🐉</div>
+    <nav>
+      <a href="index.html">首页 (Home)</a>
+      <a href="learning.html">中文学习 (Learn Chinese)</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>
+      <ruby>欢迎<rt>huān yíng</rt></ruby>
+      <ruby>来到<rt>lái dào</rt></ruby>
+      <ruby>古<rt>gǔ</rt></ruby>
+      <ruby>埃及<rt>āi jí</rt></ruby>
+      <ruby>文明<rt>wén míng</rt></ruby>
+      <ruby>之<rt>zhī</rt></ruby>
+      <ruby>旅<rt>lǚ</rt></ruby>
+    </h1>
+    <p>
+      <ruby>探索<rt>tàn suǒ</rt></ruby>
+      <ruby>金字塔<rt>jīn zì tǎ</rt></ruby>
+      <ruby>的<rt>de</rt></ruby>
+      <ruby>奥秘<rt>ào mì</rt></ruby>，
+      <ruby>同时<rt>tóng shí</rt></ruby>
+      <ruby>掌握<rt>zhǎng wò</rt></ruby>
+      <ruby>中文<rt>zhōng wén</rt></ruby>。
+    </p>
+    <p><i>(Welcome to Egypt Tourism & Chinese Learning Platform)</i></p>
+  </section>
+
+  <!-- Tourism Section -->
+  <div class="container">
+    <h2 class="section-title">
+      <ruby>埃及<rt>āi jí</rt></ruby>
+      <ruby>著名<rt>zhù míng</rt></ruby>
+      <ruby>景点<rt>jǐng diǎn</rt></ruby>
+      (Egyptian Attractions)
+    </h2>
+    <div class="grid">
+      <div class="card">
+        <h3>
+          <ruby>吉萨<rt>jí sà</rt></ruby>
+          <ruby>金字塔<rt>jīn zì tǎ</rt></ruby>
+        </h3>
+        <p>
+          <ruby>世界<rt>shì jiè</rt></ruby>
+          <ruby>七大<rt>qī dà</rt></ruby>
+          <ruby>奇迹<rt>qí jì</rt></ruby>
+          <ruby>之一<rt>zhī yī</rt></ruby>。
+        </p>
+      </div>
+      <div class="card">
+        <h3>
+          <ruby>卢克索<rt>lú kè suǒ</rt></ruby>
+          <ruby>神庙<rt>shén miào</rt></ruby>
+        </h3>
+        <p>
+          <ruby>露天<rt>lù tiān</rt></ruby>
+          <ruby>博物馆<rt>bó wù guǎn</rt></ruby>。
+        </p>
+      </div>
+      <div class="card">
+        <h3>
+          <ruby>阿布辛贝<rt>ā bù xīn bèi</rt></ruby>
+          <ruby>神庙<rt>shén miào</rt></ruby>
+        </h3>
+        <p>
+          <ruby>拉美西斯<rt>lā měi xī sī</rt></ruby>
+          <ruby>二世<rt>èr shì</rt></ruby>。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multi-language Translator -->
+  <div class="container">
+    <h2 class="section-title">
+      <ruby>中文<rt>zhōng wén</rt></ruby>
+      <ruby>翻译器<rt>fān yì qì</rt></ruby>
+    </h2>
+    <div class="translator-box">
+      <div class="translator-controls">
+        <label for="targetLang">翻译至 (Translate to):</label>
+        <select id="targetLang">
+          <option value="ar">العربية (Arabic)</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <option value="de">Deutsch</option>
+          <option value="ru">Русский</option>
+        </select>
+      </div>
+      <textarea id="sourceText" placeholder="在此输入中文文本... (Enter Chinese text here...)"></textarea>
+      <button class="btn-primary" onclick="translateText()">翻译 (Translate)</button>
+
+      <div style="margin-top: 1rem;">
+        <strong>结果 (Result):</strong>
+        <p id="translatedResult" style="color: var(--chinese-red); font-size: 1.2rem; margin-top: 0.5rem;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot Widget -->
+  <div class="chat-widget">
+    <div class="chat-header">
+      <span>智能助手 (AI Travel & Chinese Bot)</span>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-msg bot">
+        <ruby>你好<rt>nǐ hǎo</rt></ruby>！
+        我是您的埃及旅游与中文学习助手。您可以问我任何问题！<br>Hello! Ask me anything in any language.
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="userInput" placeholder="输入消息..." onkeypress="handleKeyPress(event)">
+      <button class="btn-primary" onclick="sendMessage()">发送</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
